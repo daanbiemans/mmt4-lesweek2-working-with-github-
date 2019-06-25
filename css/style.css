@@ -1,0 +1,907 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff;
+}
+
+.clear {
+    clear: both;
+}
+
+.logo {
+    margin-left: 139px;
+    margin-top: 22px;
+    float: left;
+}
+
+.sitenav-container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    background: white;
+    color: #EBEBD3;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    height: 80px;
+}
+
+header::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.site-nav {
+    padding-top: 30px;
+    position: absolute;
+    /* top: 100%; */
+    top: -2%;
+    right: 0%;
+    background: white;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+}
+
+.site-nav--open {
+    clip-path: circle(250% at top right);
+}
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav li {
+    border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+    border-bottom: none;
+}
+
+.site-nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #1D00FF;
+    display: block;
+    padding: 2em 4em 2em 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.site-nav a:hover, .site-nav a:focus {
+    background: #E4B363;
+    color: #464655;
+}
+
+.site-nav--icon {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(255, 255, 255, .4);
+}
+
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+    content: '';
+    display: block;
+    background: #EBEBD3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.open .hamburger {
+    transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+    opacity: 0;
+}
+
+.open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+@media (min-width: 700px) {
+    .menu-toggle {
+        display: none;
+    }
+    .site-nav {
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        clip-path: initial;
+    }
+    .site-nav li {
+        display: inline-block;
+        border: none;
+    }
+    .site-nav a {
+        padding: 0;
+        margin-left: 3em;
+    }
+    .site-nav a:hover, .site-nav a:focus {
+        background: transparent;
+    }
+    .site-nav--icon {
+        display: none;
+    }
+}
+
+.headertitel {
+    margin: auto;
+    width: 61, 5%;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.headertekst {
+    padding-top: 50px;
+    margin: auto;
+    line-height: 27px;
+    width: 61, 5%;
+    height: 135px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.background {
+    padding-top: 100px;
+    width: 100%;
+    height: 600px;
+    background-image: url(../img/hero.svg);
+    background-size: cover;
+}
+
+.headertiteltekst {
+    margin: auto;
+    padding-top: 20px;
+    max-width: 61.5%;
+}
+
+.wittepagina {
+    margin: auto;
+    width: 75%;
+    display: block;
+    background-color: white;
+    margin-top: -158px;
+    border: 1px solid white;
+}
+
+.foto {
+    float: left;
+}
+
+.container {
+    display: flex;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+}
+
+.c-video {
+    width: 100%;
+    max-width: 1088px;
+}
+
+.support {
+    margin: auto;
+    width: 67%;
+}
+
+.kleinetitel {
+    width: 82px;
+    font-family: 'Montserrat', sans-serif;
+    color: #1D00FF;
+    font-size: 0, 8em;
+    font-weight: bold;
+    padding-bottom: 29px;
+    padding-top: 119px;
+}
+
+.grotetitel {
+    width: 56%;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #1D00FF;
+    font-weight: bold;
+    line-height: 72px;
+}
+
+.contactpersonen {
+    margin: auto;
+    margin-top: 60px;
+    max-width: 900px;
+}
+
+.persoonlinks {
+    max-width: 370px;
+    float: left;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.persoonrechts {
+    max-width: 370px;
+    float: right;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.klaartje {
+    width: 352px;
+    font-weight: bold;
+}
+
+.contactpersoon {
+    width: 352px;
+    color: #EBEBEB;
+    padding-top: 10px;
+}
+
+.info {
+    padding-top: 30px;
+    width: 200px;
+    float: right
+}
+
+.button {
+    margin-top: 10px;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    width: 117, 15px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 0px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.banner {
+    margin: auto;
+    margin-top: 149px;
+    width: 100%;
+    height: 449px;
+    background-image: url(../img/expert\ image.svg);
+    background-size: cover;
+}
+
+.bannertekst {
+    margin: auto;
+    width: 45%;
+}
+
+.grotetitelbanner {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 50px;
+    line-height: 72px;
+    text-align: center;
+}
+
+.p-bannertekst {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.bannertekst {
+    text-align: center;
+    color: #ffffff
+}
+
+.button2 {
+    margin-top: 10px;
+    line-height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    width: 271, 15px;
+    height: 58px;
+    background-color: #1D00FF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 126px;
+    background-color: #000000;
+}
+
+footer img {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* accordion */
+
+.accordioncontent {
+    margin: auto;
+    padding: 30px;
+    max-width: 1089px;
+}
+
+h3 {
+    float: left;
+    cursor: pointer;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #4B4B4B;
+    font-weight: bold;
+    margin-left: 50px;
+    font-size: 0.9em;
+}
+
+.firstcontentpanel {
+    padding: 10px 0px 10px 0px;
+}
+
+.ui-accordion-header {
+    color: #4B4B4B;
+    border: 1px solid #ebebeb;
+    background-image: url(../img/driehoek@2x.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-y: 20px;
+}
+
+.ui-accordion-header-active {
+    color: #1D00FF;
+    background: white;
+    border: 2px solid #1D00FF;
+    background-image: url(../img/active\ driehoek@2x.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-y: 18px;
+    background-position-x: 10px;
+}
+
+.accordiontekst {
+    color: #1D00FF;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding-left: 50px;
+}
+
+.intro {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #FFAFE3;
+    border: none;
+    border-radius: 60px;
+    font-size: 1em;
+    height: 40px;
+    color: #CC0085;
+    float: right;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+.workshop {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #D1E7FF;
+    padding: 0px 30px;
+    border: none;
+    border-radius: 60px;
+    font-size: 1em;
+    height: 40px;
+    color: #1D00FF;
+    float: right;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+.download {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 0px 30px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    float: right;
+    margin-right: 40px;
+    margin-top: -20px;
+}
+
+/* toggle switch */
+
+.checkboxDark {
+    width: 120px;
+    height: 60px;
+    background: #EBEBEB;
+    margin: 25px 70px;
+    float: right;
+    border-radius: 50px;
+    position: relative;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+#chekcboxDarkInput {
+    visibility: hidden;
+    position: absolute;
+}
+
+.checkboxDark:before {
+    content: url(../img/sun.svg);
+    position: absolute;
+    top: 17px;
+    left: 13px;
+}
+
+.checkboxDark:after {
+    content: url(../img/moon.svg);
+    position: absolute;
+    top: 18px;
+    left: 84px;
+    height: 2px;
+    color: #111;
+}
+
+.checkboxDark label {
+    margin-top: -5px;
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50px;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 9px;
+    z-index: 1;
+    left: 12px;
+    background: #fff;
+}
+
+.checkboxDark input[type=checkbox]:checked+label {
+    left: 60px;
+}
+
+.switch {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    float: right;
+    margin-top: 50px;
+}
+
+.dark {
+    background-color: black
+}
+
+.dark header {
+    background-color: black
+}
+
+.dark .wittepagina {
+    background-color: black;
+}
+
+.dark h3 {
+    background-color: black;
+}
+
+.dark h3 {
+    color: white;
+}
+
+.dark .klaartje {
+    color: white;
+}
+
+.dark .button {
+    background-color: white;
+    color: black;
+}
+
+.dark .ui-accordion-header {
+    background-image: url(../img/darkdriehoek@2x.png);
+}
+
+.dark .ui-accordion-header-active {
+    background-image: url(../img/darkdriekhoekactive@2x.png);
+}
+
+.dark nav li a {
+    color: #fff;
+}
+
+.dark .logo {
+    background-image: url(../img/darklogo.png);
+}
+
+.dark .kleinetitel {
+    color: #fff;
+}
+
+.dark .grotetitel {
+    color: #fff;
+}
+
+.dark .accordiontekst {
+    color: #fff;
+}
+
+.dark .accordioncontent {
+    background-color: black;
+}
+
+
+/* modal */
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.modal {
+    margin: auto;
+    margin-top: 20%;
+    padding: 20px;
+    background: #BBFFB2;
+    width: 200px;
+    height: 225px;
+}
+
+.animation {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    color: #111;
+}
+
+.closebtn {
+    background: none;
+    cursor: pointer;
+    float: right;
+    margin-right: -25px;
+}
+
+.modalsluit {
+    width: 25px;
+}
+
+.animation span {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animate 0.5s linear infinite;
+}
+
+.animation span:nth-child(1) {
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+.animation span:nth-child(2) {
+    animation-delay: 0.75s;
+    animation-iteration-count: infinite;
+}
+
+.animation span:nth-child(3) {
+    animation-delay: 1.25s;
+    animation-iteration-count: infinite;
+}
+
+.animation span:nth-child(4) {
+    animation-delay: 1.75s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        color: #fff;
+        filter: blur(10px);
+        text-shadow: 0 0 30px #CC0085, 0 0 40px #CC0085, 0 0 50px #CC0085;
+    }
+    5%, 95% {
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+/* video */
+
+.video-js {
+    width: 100%;
+    margin: auto;
+}
+
+.vid-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.playbtn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url(../img/play-btn.svg);
+    background-position: center;
+    position: absolute;
+    display: none;
+    top: 40%;
+    left: 45%;
+}
+
+.rewindbtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    background-image: url(../img/rewindbtn.svg);
+    background-position: center;
+    position: absolute;
+    display: none;
+    top: 43%;
+    left: 38%;
+}
+
+.checkbtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-image: url(../img/checkbtn.svg);
+    background-position: center;
+    position: absolute;
+    display: none;
+    top: 43%;
+    left: 55%;
+}
+
+.vid-container:hover .playbtn {
+    display: inline-block;
+}
+
+.vid-container:hover .rewindbtn {
+    display: inline-block;
+}
+
+.vid-container:hover .checkbtn {
+    display: inline-block;
+}
+
+.watched {
+    float: left;
+    margin-left: 20px;
+    margin-top: -20px;
+    width: 80px;
+    height: 40px;
+    border-radius: 35px;
+    background-image: url(../img/watched.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+@media all and (max-width: 1000px) and (min-width: 300px) {
+    .logo {
+        margin-left: 39px;
+    }
+    .headertitel {
+        font-size: 30px;
+    }
+    .headertekst {
+        padding-top: 25px;
+        font-size: 15px;
+    }
+    .headertiteltekst {
+        padding-top: 40px;
+    }
+    .kleinetitel {
+        font-size: 15px;
+    }
+    .grotetitel {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .grotetitelbanner {
+        font-size: 30px;
+        padding-top: 50px;
+        line-height: 30px;
+    }
+    .contactpersonen {
+        margin: auto;
+        margin-top: 60px;
+        max-width: 900px;
+    }
+    .persoonlinks {
+        margin-top: 30px;
+        float: none;
+        margin: auto;
+    }
+    .persoonrechts {
+        margin-top: 30px;
+        float: none;
+        margin: auto;
+    }
+    .workshop {
+        padding: 0px 20px;
+        height: 20px;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    .download {
+        padding: 0px 20px;
+        height: 20px;
+        font-size: 8px;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .intro {
+        font-size: 8px;
+        padding: 0px 20px;
+        height: 20px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    h3 {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .playbtn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-image: url(../img/play-btn.svg);
+        background-position: center;
+        position: absolute;
+        display: none;
+        top: 40%;
+        left: 45%;
+    }
+    .rewindbtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 40%;
+        background-color: white;
+        cursor: pointer;
+        background-image: url(../img/rewindbtn.svg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        display: none;
+        top: 43%;
+        left: 23%;
+    }
+    .checkbtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        background-image: url(../img/checkbtn.svg);
+        background-position: center;
+        position: absolute;
+        display: none;
+        top: 43%;
+        left: 66%;
+    }
+    .foto {
+        margin-top: 20px;
+        width: 120px;
+    }
+}
+
+@media all and (max-width: 500px) and (min-width: 300px) {
+    .foto {
+        float: none;
+    }
+    .info {
+        float: none;
+    }
+    .button2 {
+        font-size: 10px;
+        height: 40px;
+    }
+}
+
+@media all and (max-width: 600px) and (min-width: 300px) {
+    .workshop {
+        display: none;
+    }
+    .download {
+        display: none;
+    }
+    .intro {
+        display: none;
+    }
+
+}
+
+@media all and (max-width: 375px) {
+    .playbtn{
+        display: block;
+    }
+
+    .rewindbtn{
+        display: inline-block;
+    }
+
+    .checkbtn{
+        
+        display: block;
+    }
+
+    .headertekst {
+       font-size: 12px;
+    }
+}
